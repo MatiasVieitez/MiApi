@@ -17,20 +17,20 @@ let Personas = [
 
     {
         id: 1,
-        Name: 'Matias',
-        Surname: 'Vieitez',
+        Name: 'Pablo',
+        Surname: 'Perez',
         Age: 21,
     },
     {
         id: 2,
-        Name: 'Raul',
-        Surname: 'Vieitez',
+        Name: 'Jonathan',
+        Surname: 'Fernandez',
         Age: 53,
     },
     {
         id: 3,
-        Name: 'Valeria',
-        Surname: 'Gianarello',
+        Name: 'Lucas',
+        Surname: 'Gonzales',
         Age: 48,
     }
 ]
