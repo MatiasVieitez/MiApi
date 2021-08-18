@@ -1,0 +1,10 @@
+POST http://localhost:3000/Api/Personas 
+Content-Type:application/json
+
+{
+
+  "Name":"Santiago",
+  "Surname":"Vieitez",
+  "Age":17
+
+}
