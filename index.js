@@ -1,17 +1,21 @@
 const express = require('express');
+const consoleMid = require('./consoleMiddleware')
+const cors = require('cors')
 const app = express();
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(express.json())
+
+app.use(consoleMid)
+app.use(cors())
+
 
 app.listen(port, () => {
 
     console.log('server runing on port :', port)
 
 })
-
-
 
 let Personas = [
 
@@ -57,7 +61,6 @@ app.get('/Api/Personas/:id', (req, res) => {
 
 })
 
-
 app.delete('/Api/Personas/:id', (req, res) => {
 
     const id = Number(req.params.id)
@@ -87,3 +90,14 @@ app.post('/Api/Personas', (req, res) => {
     res.json(nPersona)
 
 })
+
+
+app.use((req, res) => {
+
+    res.status(404).json({
+
+        error: 'Not Found'
+    })
+
+})
+
